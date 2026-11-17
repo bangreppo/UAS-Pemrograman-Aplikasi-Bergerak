@@ -29,9 +29,23 @@ class MyHouslyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: buildTheme(),
       home: Api.token == null ? const LoginPage() : const ApartmentsPage(),
-      builder: (context, child) => ColoredBox(
-        color: const Color(0xFFE6EAE8),
-        child: Center(child: ConstrainedBox(constraints: const BoxConstraints(maxWidth: 520), child: ClipRect(child: child))),
+      builder: (context, child) => LayoutBuilder(
+        builder: (c, cons) {
+          final w = cons.maxWidth > 1080 ? 1080.0 : cons.maxWidth;
+          return ColoredBox(
+            color: const Color(0xFFE8E4DA),
+            child: Center(
+              child: SizedBox(
+                width: w,
+                height: cons.maxHeight,
+                child: DecoratedBox(
+                  decoration: const BoxDecoration(color: kPaper, boxShadow: [BoxShadow(color: Color(0x22000000), blurRadius: 30)]),
+                  child: ClipRect(child: child),
+                ),
+              ),
+            ),
+          );
+        },
       ),
     );
   }
