@@ -9,8 +9,8 @@ Tugas UAS Pemrograman Aplikasi Bergerak (individu).
 
 | | |
 | --- | --- |
-| Nama | _(isi nama)_ |
-| NIM | _(isi NIM)_ |
+| Nama | Revo Novandra |
+| NIM | 24051214211 |
 | Judul aplikasi | MyHously |
 | Stack | Flutter (frontend) · Laravel 11+ + Sanctum (backend REST API) · MySQL |
 
@@ -24,44 +24,9 @@ MyHously/
 └── README.md
 ```
 
-Folder `backend/` di dalam zip hanya berisi kode MyHously (overlay). Skrip `setup.sh` membuat proyek Laravel penuh lalu menyalin kode ini ke dalamnya. Begitu juga `frontend/`: `flutter create` menambahkan folder platform (web, android).
-
 ## Prasyarat
 
 PHP 8.2+, Composer, MySQL (XAMPP, port 3307), Flutter SDK, Google Chrome.
-
-## Cara menjalankan
-
-```bash
-cd MyHously
-./setup.sh                      # backend + frontend sekaligus (butuh internet)
-```
-
-Lalu buka dua terminal:
-
-```bash
-# Terminal A (backend, http://127.0.0.1:8000)
-cd backend && php artisan serve
-
-# Terminal B (aplikasi di Chrome)
-cd frontend && flutter run -d chrome
-```
-
-Untuk tampilan HP di Chrome: buka DevTools (F12) lalu aktifkan *Toggle device toolbar*. Layar aplikasi juga dibatasi lebar 520 px agar tetap tampil seperti HP di layar laptop.
-
-Port MySQL, nama database, dan kredensial diatur di bagian atas `setup.sh` (default: `127.0.0.1:3307`, database `myhously`, user `root`, tanpa kata sandi). Database dibuat otomatis bila klien `mysql` ditemukan; jika tidak, buat database `myhously` lewat phpMyAdmin lalu jalankan `./setup.sh backend`.
-
-**Android emulator:** aplikasi otomatis memakai `http://10.0.2.2:8000/api`. Untuk alamat lain: `flutter run --dart-define=API=http://ALAMAT:8000/api`.
-
-**Windows / manual** (tanpa `setup.sh`):
-
-```bash
-composer create-project laravel/laravel laravel_full
-cd laravel_full && php artisan install:api
-# salin isi folder backend/ ke laravel_full/ (timpa file yang sama), ubah .env (DB mysql port 3307, APP_TIMEZONE=Asia/Jakarta)
-php artisan migrate:fresh --seed && php artisan serve
-# frontend: salin lib/ dan pubspec.yaml ke proyek hasil `flutter create`, lalu `flutter pub get`
-```
 
 ### Penagihan otomatis (scheduler)
 
