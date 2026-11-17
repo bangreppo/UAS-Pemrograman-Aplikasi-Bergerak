@@ -1,0 +1,10 @@
+backend/vendor/
+backend/node_modules/
+backend/.env
+backend/storage/*.key
+backend/database/database.sqlite
+frontend/build/
+frontend/.dart_tool/
+.laravel_tmp/
+.fe_backup/
+.DS_Store
