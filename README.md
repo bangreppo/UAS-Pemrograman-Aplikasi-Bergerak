@@ -1,15 +1,15 @@
 # MyHously
 
-**Platform manajemen apartemen** yang menyatukan pengelola (Owner/Admin) dan penghuni dalam satu aplikasi: unit, penghuni, tagihan sewa, denda, pembayaran, fasilitas, pengumuman, dan laporan kerusakan, semuanya digital dan terintegrasi.
+**Platform manajemen apartemen** yang menyatukan pengelola yaitu Owner,Admin dan penghuni dalam satu aplikasi: unit, penghuni, tagihan sewa, denda, pembayaran, fasilitas, pengumuman, dan laporan kerusakan, semuanya digital dan terintegrasi.
 
 Tugas UAS Pemrograman Aplikasi Bergerak (individu).
 
 | | |
 | --- | --- |
-| Nama / NIM | _(isi nama)_ / _(isi NIM)_ |
+| Nama / NIM | Revo Novandra / 24051214211 |
 | Judul | MyHously |
 | Teknologi | Flutter (Web + Android) · Laravel + Sanctum (REST API) · MySQL · dompdf |
-| Skala | 21 tabel · 78 endpoint API · ± 4.000 baris Dart · ± 2.700 baris PHP · 112 pemeriksaan uji otomatis |
+| Skala | 21 tabel · 78 endpoint API · 112 pemeriksaan uji otomatis |
 
 ## Masalah yang diselesaikan
 
